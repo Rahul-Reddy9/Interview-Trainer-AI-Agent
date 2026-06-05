@@ -1,0 +1,20 @@
+{
+  "project_name": "IBM-Interview-Trainer-Agent-Pipeline",
+  "nodes": [
+    { "id": "chat_input_1", "type": "ChatInput", "label": "User Query Interface" },
+    { "id": "agent_resume_2", "type": "AgentNode", "label": "Resume Analysis Agent (Granite-4.0)" },
+    { "id": "agent_question_3", "type": "AgentNode", "label": "Interview Question Generator Agent" },
+    { "id": "vector_retriever_4", "type": "FAISS-Retriever", "label": "RAG Knowledge Database Index" },
+    { "id": "agent_evaluation_5", "type": "AgentNode", "label": "Evaluation Agent Engine" },
+    { "id": "agent_recommendation_6", "type": "AgentNode", "label": "Learning Recommendation Agent" },
+    { "id": "chat_output_7", "type": "ChatOutput", "label": "Visual Dashboard Stream Render" }
+  ],
+  "edges": [
+    { "source": "chat_input_1", "target": "agent_resume_2" },
+    { "source": "agent_resume_2", "target": "agent_question_3" },
+    { "source": "vector_retriever_4", "target": "agent_question_3" },
+    { "source": "agent_question_3", "target": "agent_evaluation_5" },
+    { "source": "agent_evaluation_5", "target": "agent_recommendation_6" },
+    { "source": "agent_recommendation_6", "target": "chat_output_7" }
+  ]
+}
