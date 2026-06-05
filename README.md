@@ -64,7 +64,7 @@ ProblemStatement.pdf
 ProjectPresentation.pptx
 README.md
 🔗 GitHub Repository
-https://github.com/yourusername/IBM-Interview-Trainer-Agent
+https://github.com/Rahul-Reddy9/Interview-Trainer-AI-Agent
 
 Author
 
